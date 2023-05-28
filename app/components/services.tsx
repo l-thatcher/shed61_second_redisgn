@@ -24,7 +24,7 @@ export default function Services() {
                         <div className='flex flex-col items-center justify-center w-1/4'>
                             <div className='w-20 h-20 rounded-full my-10 bg-gradient-to-tl from-orange-500 viq-yellow-300 to-sky-200'></div>
                             <p className='text-white text-xl'>bespoke coded sites</p>
-                            <p className='text-white text-md text-center p-5'> We'll work together to develop a list of requirements for your site. Then work through a plan, 
+                            <p className='text-white text-md text-center p-5'> We&aposll work together to develop a list of requirements for your site. Then work through a plan, 
                             prototype and then finally produce the site you want. This provides the most customisation and will allow us to create the exact site that you want.
                              However, this is the most time consuming approach.</p>
                         </div>
