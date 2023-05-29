@@ -1,4 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image'
+
+import logo from "/public/logo-white.png";
+
 
 export default function Navbar() {
   return (
@@ -18,7 +22,14 @@ export default function Navbar() {
             </li>
 
             <li>
-              <h1 className='text-2xl text-white'>shed61</h1>
+              <div>
+              <Image className=''
+                  priority
+                  src={logo}
+                  alt="logo"
+                  height={120}
+                />
+              </div>
             </li>
 
             <li>

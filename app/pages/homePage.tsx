@@ -13,14 +13,21 @@ import moon from "/public/layers/moon.png";
 import sky from "/public/layers/sky.png";
 import underwaterdot from "/public/layers/underwaterdot.png";
 
+import logo from "/public/logo.png";
+
+
 import {Parallax, ParallaxLayer} from '@react-spring/parallax';
 
 
 import Navbar from '../components/navbar';
 import Services from '../components/services'
+import { start } from 'repl';
 
 
 export default function HomePage() {
+
+  type StickyConfig = { start?: number; end?: number } | undefined
+
   return (
     <main className="bg-[#272B4A]">
       <div className="flex justify-center h-screen">
@@ -71,8 +78,16 @@ export default function HomePage() {
               src={underwaterdot}
               alt="water dots"
             />
+          </ParallaxLayer>
 
-            <div>
+          <ParallaxLayer offset={0.05} sticky={{start: 0, end: 0.05}}>
+            <div className='flex-col justify-center'>
+              <p className='text-center text-3xl p-4'>web and sotware development</p>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={0.9} speed={0.1}>
+          <div>
               <div className="text-center px-[30vw]">
                 <h2 className="text-2xl text-white">professional website</h2>
                 <h2 className="text-2xl text-white">and software development</h2>
@@ -84,8 +99,6 @@ export default function HomePage() {
               </div>
               <Services></Services>
             </div>
-
-            
           </ParallaxLayer>
         </Parallax>
       </div>
