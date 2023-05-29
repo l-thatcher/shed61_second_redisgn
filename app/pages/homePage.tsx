@@ -80,12 +80,6 @@ export default function HomePage() {
             />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0.05} sticky={{start: 0, end: 0.05}}>
-            <div className='flex-col justify-center'>
-              <p className='text-center text-3xl p-4'>web and sotware development</p>
-            </div>
-          </ParallaxLayer>
-
           <ParallaxLayer offset={0.9} speed={0.1}>
           <div>
               <div className="text-center px-[30vw]">
