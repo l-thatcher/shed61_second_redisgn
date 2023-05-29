@@ -4,6 +4,9 @@ import Image from 'next/image'
 import logo from "/public/logo-white.png";
 
 
+import { Parallax, ParallaxLayer, IParallax} from '@react-spring/parallax'
+
+
 export default function Navbar() {
   return (
     <div>
@@ -15,8 +18,8 @@ export default function Navbar() {
                 <p className="text-white text-md font-w200">home</p>
               </Link>
             </li>
-            <li>
-              <Link href="/services">
+            <li >
+              <Link href="#services">
                 <p className="text-white text-md font-w300">services</p>
               </Link>
             </li>

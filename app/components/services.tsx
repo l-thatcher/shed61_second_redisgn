@@ -5,7 +5,7 @@ export default function Services() {
         <div className='bg-[#272B4A] py-20'>
             <div className='container mx-auto'>                     
                 <div className='flex flex-col items-center justify-center'>
-                    <h1 className='text-5xl text-white py-20'>what we do</h1>
+                    <h1 className='text-5xl text-white py-10'>what we do</h1>
                     <div className='flex flex-row justify-around w-full px-20'>
                         <div className='flex flex-col items-center justify-center w-1/4 h-2/3'>
                             <div className='w-20 h-20 my-10 rounded-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-green-300 via-blue-500 to-purple-600'></div>

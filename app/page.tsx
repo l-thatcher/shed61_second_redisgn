@@ -6,10 +6,7 @@ export default function Home() {
   return (
     <main className="">
       <div>
-        <div className='z-10 fixed w-full'>
-          <Navbar/> 
-        </div>
-        <div className='pt-20'>
+        <div className=''>
           <HomePage></HomePage>
         </div>
       </div>
