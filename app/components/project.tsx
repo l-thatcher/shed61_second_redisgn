@@ -3,6 +3,9 @@ import Image from 'next/image'
 import quote from "/public/quote.png";
 import Link from 'next/link';
 
+import { StaticImageData } from "next/image"
+
+
 interface ProjectProps {
   imageSrc: StaticImageData;
   title: string;

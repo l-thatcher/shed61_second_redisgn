@@ -284,7 +284,7 @@ export default function HomePage() {
           </ParallaxLayer>
           <ParallaxLayer offset={4.6} speed={0.2}>
             <div className='w-full text-center'>
-                <h1 className='text-5xl text-white py-10'>what we've done</h1>
+                <h1 className='text-5xl text-white py-10'>what we`&apos;`ve done</h1>
             </div>
             
             <Carousel autoPlay={true} infiniteLoop={true} showStatus={false}
