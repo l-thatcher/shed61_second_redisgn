@@ -25,14 +25,16 @@ export default function Navbar() {
             </li>
 
             <li>
-              <div>
-              <Image className=''
-                  priority
-                  src={logo}
-                  alt="logo"
-                  height={120}
-                />
-              </div>
+              <Link href="/">
+                <div>
+                  <Image className=''
+                    priority
+                    src={logo}
+                    alt="logo"
+                    height={120}
+                  />
+                </div>
+              </Link>
             </li>
 
             <li>

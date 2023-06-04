@@ -11,7 +11,7 @@ import heroPNG from "/public/heroImage.png";
 import background from "/public/layers/Background.png";
 import bottom from "/public/layers/bottom.png";
 import fish_planet from "/public/layers/fish_planet.png";
-import man from "/public/layers/man.png";
+import man from "/public/layers/shed.png";
 import moon from "/public/layers/moon.png";
 import sky from "/public/layers/sky.png";
 import underwaterdot from "/public/layers/underwaterdot.png";
@@ -78,18 +78,19 @@ export default function HomePage() {
           <nav className="sticky -top-1 bg-[#232E4D] flex flex-col">
             <div className="container mx-auto h-20">
               <ul className="flex items-center justify-around h-full">
-                <li>
+                {/* <li>
                   <p className="text-white text-md font-w200"  onClick={() => parallax.current.scrollTo(0.9)}>home</p>
-                </li>
+                </li> */}
                 <li >
                   <p className="text-white text-md font-w300" onClick={() => parallax.current.scrollTo(1.4)}>services</p>
                 </li>
                 <li >
-                  <p className="text-white text-md font-w300" onClick={() => parallax.current.scrollTo(4.45)}>portfolio</p>
+                  <p className="text-white text-md font-w300" onClick={() => parallax.current.scrollTo(4.4)}>portfolio</p>
                 </li>
+
                 <li>
-                  <div>
-                  <Image className=''
+                  <div onClick={() => parallax.current.scrollTo(0.9)}>
+                    <Image className=''
                       priority
                       src={logo}
                       alt="logo"
@@ -99,20 +100,18 @@ export default function HomePage() {
                 </li>
 
                 <li>
-                  <Link href="/about">
-                    <p className="text-white text-md font-w400">skills</p>
-                  </Link>
+                  <p className="text-white text-md font-w400" onClick={() => parallax.current.scrollTo(5.4)}>about</p>
                 </li>
                 <li>
                   <Link href="/about">
-                    <p className="text-white text-md font-w400">about</p>
+                    <p className="text-white text-md font-w400">contact</p>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/portfolio">
-                    <p className="text-white text-md font-w500">contact</p>
+                    <p className="text-white text-md font-w500">h47</p>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>
@@ -285,10 +284,10 @@ export default function HomePage() {
           </ParallaxLayer>
           <ParallaxLayer offset={4.6} speed={0.2}>
             <div className='w-full text-center'>
-                <h1 className='text-5xl text-white py-10'>what we&apos;ve done</h1>
+                <h1 className='text-5xl text-white py-10'>what we've done</h1>
             </div>
             
-            <Carousel autoPlay={true} infiniteLoop={true}
+            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false}
             renderArrowPrev={(clickHandler, hasPrev) => {
               return (
                 <div
@@ -301,6 +300,9 @@ export default function HomePage() {
                 </div>
               );
             }}
+
+            
+            
             renderArrowNext={(clickHandler, hasNext) => {
               return (
                 <div
@@ -322,9 +324,16 @@ export default function HomePage() {
             </Carousel>
 
             <Link href={'#contact'} className='w-full flex justify-center mt-10'>
-              <button type="button" className="w-1/2 mx-auto text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-xl px-5 py-2.5 text-center">get in touch</button>
+              <button type="button" className="w-1/3 mx-auto text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-xl px-5 py-2.5 text-center">get in touch</button>
             </Link>
           </ParallaxLayer>
+
+          <ParallaxLayer offset={5.5} speed={0}>
+            <div className='w-full text-center'>
+                <h1 className='text-5xl text-white py-10'>about me</h1>
+            </div>
+          </ParallaxLayer>
+
         </Parallax>
       </div>
     </main>

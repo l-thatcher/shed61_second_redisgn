@@ -3,9 +3,6 @@ import Image from 'next/image'
 import quote from "/public/quote.png";
 import Link from 'next/link';
 
-import { StaticImageData } from "next/image"
-
-
 interface ProjectProps {
   imageSrc: StaticImageData;
   title: string;
@@ -67,27 +64,25 @@ export default function Project({ imageSrc, title, platform, owner, quoteText, a
         </div>
         </div> 
 
-        <div className='h-full'></div>
+        <div className='flex justify-center'>
+        <Link href="https://www.lymingtondecorating.com" target="_blank" rel="noopener noreferrer" className='w-full flex justify-center'>
+            <button
+              type="button"
+              className="w-3/4 mt-5 mx-auto text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center"> click here to view site
+            </button>
+          </Link>
+        </div> 
     
       </div>
 
-      <div className='w-1/2 h-[70vh] flex-col justify-between'>
-        <div className='flex px-5'>
+      <div className='w-1/2 h-[70vh] flex-col justify-center items-center'>
+        <div className='px-5 h-full flex justify-center items-center'>
           <Image
             className='shadow-[0_0_50px_0_#202020]'
-            objectFit='contain'
             src={imageSrc}
             alt={title}
           />
         </div>
-        <div className='flex justify-center'>
-        <Link href={link} target="_blank" rel="noopener noreferrer" className='w-full flex justify-center'>
-            <button
-              type="button"
-              className="w-3/4 mt-5 mx-auto text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center"> view site
-            </button>
-          </Link>
-        </div> 
       </div>
 
       <div className='w-1/3 h-full flex flex-col justify-around text-center bg-slate-600 bg-opacity-50 backdrop-blur-sm p-10 rounded-s-xl'>
