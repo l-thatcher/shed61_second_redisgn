@@ -416,13 +416,13 @@ export default function HomePage() {
             <div className='w-full flex justify-center'>
               <div className='w-2/3 text-center'>
                   <p className='text-md text-white py-10'>
-                    I'm a web developer based on the beautiful south coast of the U.K. I absolutely love creating websites with user-friendly interfaces that are visually stunning. I graduated from Cardiff University with a degree in Software Engineering, where I learned the ins and outs of website and app development.
+                    I&apos;m a web developer based on the beautiful south coast of the U.K. I absolutely love creating websites with user-friendly interfaces that are visually stunning. I graduated from Cardiff University with a degree in Software Engineering, where I learned the ins and outs of website and app development.
                     <br/><br/>
 
-                    I've got experience working with various technologies like HTML, CSS, SQL, and JavaScript for websites, as well as different frameworks for app development. Currently, I also work alongside a local company that specializes in web design and digital marketing.
+                    I&apos;ve got experience working with various technologies like HTML, CSS, SQL, and JavaScript for websites, as well as different frameworks for app development. Currently, I also work alongside a local company that specializes in web design and digital marketing.
                     <br/><br/>
 
-                    My goal is to make websites that not only look great but also make it easy for people to find what they need and have a positive experience. Let's work together to create an awesome online presence for your clients!
+                    My goal is to make websites that not only look great but also make it easy for people to find what they need and have a positive experience. Let&apos;s work together to create an awesome online presence for your clients!
                   </p>
               </div>
             </div>
