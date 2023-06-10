@@ -4,6 +4,11 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import React, { useRef } from 'react'
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import {Parallax, ParallaxLayer, IParallax} from '@react-spring/parallax';
+import ContactForm from '../components/contactForm';
 
 
 import heroPNG from "/public/heroImage.png";
@@ -33,7 +38,6 @@ import paintingByNumbers from "/public/paintingByNumbersHome.png";
 import forestPilates from "/public/forestPilatesHome.png";
 
 
-import {Parallax, ParallaxLayer, IParallax} from '@react-spring/parallax';
 
 
 import Navbar from '../components/navbar';
@@ -42,10 +46,16 @@ import { start } from 'repl';
 import Project from '../components/project';
 import { link } from 'fs';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import aboutBG from "/public/bg2-0000.png";
+import layer1 from "/public/about-layers/layer1.png";
+import layer2 from "/public/about-layers/layer2.png";
+import layer3 from "/public/about-layers/layer3.png";
+import layer4 from "/public/about-layers/layer4.png";
+import layer5 from "/public/about-layers/layer5.png";
 
-import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
+import portrait from "/public/portrait.jpg";
+
+
 
 
 const paintingByNumbersData = {
@@ -103,9 +113,7 @@ export default function HomePage() {
                   <p className="text-white text-md font-w400" onClick={() => parallax.current.scrollTo(5.4)}>about</p>
                 </li>
                 <li>
-                  <Link href="/about">
-                    <p className="text-white text-md font-w400">contact</p>
-                  </Link>
+                  <p className="text-white text-md font-w400" onClick={() => parallax.current.scrollTo(6.5)}>contact</p>
                 </li>
                 {/* <li>
                   <Link href="/portfolio">
@@ -328,10 +336,100 @@ export default function HomePage() {
             </Link>
           </ParallaxLayer>
 
+          {/* <ParallaxLayer offset={5.5} speed={0}>
+            <Image className=''
+                priority
+                src={aboutBG}
+                alt="bg"
+              />
+          </ParallaxLayer> */}
+
+          <ParallaxLayer offset={5.5} speed={0.01}>
+            <Image className=''
+                src={layer1}
+                alt="layer1"
+              />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5.5} speed={0.02}>
+            <Image className=''
+              src={layer2}
+              alt="layer2"
+            />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5.5} speed={0.08}>
+            <Image className=''
+              src={layer3}
+              alt="layer3"
+            />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5.5} speed={0.04}>
+            <Image className=''
+              src={layer4}
+              alt="layer4"
+            />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5.5} speed={0.07}>
+            <Image className=''
+              src={layer5}
+              alt="layer5"
+            />
+          </ParallaxLayer>
+
           <ParallaxLayer offset={5.5} speed={0}>
             <div className='w-full text-center'>
                 <h1 className='text-5xl text-white py-10'>about me</h1>
             </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5.65} speed={0}>
+            <div className='pl-[5vw]'>
+              <Image className='rounded-full'
+              height={400}
+                src={portrait}
+                alt="portrait"
+              />
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5.65} speed={0}>
+            <div className='w-full flex justify-end pr-[5vw] m-20'>
+              <div className='w-1/2 text-center bg-gray-800 rounded-xl'>
+                  <h2 className='text-2xl text-white pt-10'>Skills</h2>
+                  <p className='text-white p-10 text-start'>
+                    <ul className='list-disc'>
+                      <li>CMS development (content managment systems) - Wix, Squarspace, Wordpress and more</li>
+                      <li>Code devepment - HTML, Javascript, CSS, Python, Java, Dart</li>
+                      <li>Website development frameworks - React, Next.js, Flask, Spring</li>
+                      <li>Mobile development frameworks - React Native, Flutter</li>
+                      <li>AI developement for image creation, copywrite, and code assistance</li>
+                    </ul>
+                  </p>
+              </div>
+            </div>
+          </ParallaxLayer>
+          
+          <ParallaxLayer offset={6.1} speed={0}>
+            <div className='w-full flex justify-center'>
+              <div className='w-2/3 text-center'>
+                  <p className='text-md text-white py-10'>
+                    I'm a web developer based on the beautiful south coast of the U.K. I absolutely love creating websites with user-friendly interfaces that are visually stunning. I graduated from Cardiff University with a degree in Software Engineering, where I learned the ins and outs of website and app development.
+                    <br/><br/>
+
+                    I've got experience working with various technologies like HTML, CSS, SQL, and JavaScript for websites, as well as different frameworks for app development. Currently, I also work alongside a local company that specializes in web design and digital marketing.
+                    <br/><br/>
+
+                    My goal is to make websites that not only look great but also make it easy for people to find what they need and have a positive experience. Let's work together to create an awesome online presence for your clients!
+                  </p>
+              </div>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={6.5}>
+            <ContactForm></ContactForm>
           </ParallaxLayer>
 
         </Parallax>
