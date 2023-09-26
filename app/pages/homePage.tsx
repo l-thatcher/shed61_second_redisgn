@@ -9,7 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import {Parallax, ParallaxLayer, IParallax} from '@react-spring/parallax';
 import ContactForm from '../components/contactForm';
-
+import { motion } from "framer-motion"
 
 import heroPNG from "/public/heroImage.png";
 
@@ -46,7 +46,7 @@ import { start } from 'repl';
 import Project from '../components/project';
 import { link } from 'fs';
 
-import aboutBG from "/public/bg2-0000.png";
+
 import layer1 from "/public/about-layers/layer1.png";
 import layer2 from "/public/about-layers/layer2.png";
 import layer3 from "/public/about-layers/layer3.png";
@@ -55,6 +55,7 @@ import layer5 from "/public/about-layers/layer5.png";
 
 import portrait from "/public/portrait.jpg";
 
+import contactBG from "/public/00003.png";
 
 
 
@@ -127,7 +128,7 @@ export default function HomePage() {
       </div>
 
       <div className="flex justify-center h-screen">
-        <Parallax ref={parallax} pages={8}>
+        <Parallax ref={parallax} pages={7.55}>
           <ParallaxLayer offset={0} speed={0.1}>
             <Image className=''
                 priority
@@ -396,7 +397,7 @@ export default function HomePage() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={5.65} speed={0}>
-            <div className='w-full flex justify-end pr-[5vw] m-20'>
+            <div className='w-full flex justify-end pr-[15vw] m-20'>
               <div className='w-1/2 text-center bg-gray-800 rounded-xl'>
                   <h2 className='text-2xl text-white pt-10'>Skills</h2>
                   <p className='text-white p-10 text-start'>
@@ -428,8 +429,29 @@ export default function HomePage() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={6.5}>
+          <ParallaxLayer offset={6.5} speed={0}>
+            <motion.div
+              initial={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+            className=''>
+              <Image className=''
+                src={contactBG}
+                alt="background"
+              />
+            </motion.div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={6.55} speed={-0.1}>
+            <div className='w-full text-center'>
+                <h1 className='text-5xl text-white py-10'>get in touch</h1>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={6.65} speed={-0.2}>
+            <div className='flex justify-center'>
             <ContactForm></ContactForm>
+            </div>
           </ParallaxLayer>
 
         </Parallax>
