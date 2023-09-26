@@ -296,7 +296,7 @@ export default function HomePage() {
                 <h1 className='text-5xl text-white py-10'>what we&apos;ve done</h1>
             </div>
             
-            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false}
+            <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} showStatus={false}
             renderArrowPrev={(clickHandler, hasPrev) => {
               return (
                 <div
