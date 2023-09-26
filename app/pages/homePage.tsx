@@ -55,7 +55,7 @@ import layer5 from "/public/about-layers/layer5.png";
 
 import portrait from "/public/portrait.jpg";
 
-import contactBG from "/public/00003.png";
+// import contactBG from "/public/00003.png";
 
 
 
