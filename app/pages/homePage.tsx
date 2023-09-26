@@ -55,7 +55,7 @@ import layer5 from "/public/about-layers/layer5.png";
 
 import portrait from "/public/portrait.jpg";
 
-// import contactBG from "/public/00003.png";
+import contactBG from "/public/00003.png";
 
 
 
@@ -431,9 +431,6 @@ export default function HomePage() {
 
           <ParallaxLayer offset={6.5} speed={0}>
             <motion.div
-              initial={{ opacity: 1 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
             className=''>
               <Image className=''
                 src={contactBG}
