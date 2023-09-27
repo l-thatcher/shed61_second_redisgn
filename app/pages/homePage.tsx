@@ -86,7 +86,7 @@ export default function HomePage() {
     <main className="bg-[#272B4A]">
       <div className='z-10 fixed w-full'>
         <div>
-          <nav className="sticky -top-1 bg-[#232E4D] flex flex-col">
+          <nav className="hidden sticky -top-1 bg-[#232E4D] md:flex flex-col">
             <div className="container mx-auto h-20">
               <ul className="flex items-center justify-around h-full">
                 {/* <li>
@@ -128,7 +128,7 @@ export default function HomePage() {
       </div>
 
       <div className="flex justify-center h-screen">
-        <Parallax ref={parallax} pages={7.55}>
+        <Parallax ref={parallax} pages={window.innerWidth < 768 ? 7.3 : 7.45}>
           <ParallaxLayer offset={0} speed={0.1}>
             <Image className=''
                 priority
@@ -177,7 +177,7 @@ export default function HomePage() {
             />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1} speed={0.1}>
+          <ParallaxLayer offset={window.innerWidth < 768 ? 0.3 : 1} speed={0.1}>
           <div className='flex justify-center'>
               <Image className=''
                   priority
@@ -187,7 +187,7 @@ export default function HomePage() {
                 />
           </div>
           <div>
-              <div className="text-center px-[30vw]">
+              <div className="text-center md:px-[30vw]">
                 <h2 className="text-3xl text-white">professional website</h2>
                 <h2 className="text-3xl text-white">and software development</h2>
                 <p className="text-md text-white p-4">As a web developer, my mission is to create captivating, user-friendly websites that leave a 
@@ -203,16 +203,17 @@ export default function HomePage() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2} speed={0}>
-            <Image className=''
+          <ParallaxLayer offset={window.innerWidth < 768 ? 1.4 : 2} speed={0}>
+            <Image className='hidden md:flex'
               priority
               src={planets}
               alt="planets"
             />
           </ParallaxLayer>
 
+                  
           <ParallaxLayer speed={0} sticky={{start: 2.25, end:3.55}}>
-            <div className="w-full flex justify-start h-screen items-center">
+            <div className="w-full hidden md:flex justify-start h-screen items-center">
               <div className=' w-[40vw] h-[85vh] flex flex-col justify-around items-center'>
 
                 <div className='p-1'>
@@ -259,7 +260,7 @@ export default function HomePage() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={2.4} speed={0.2} id='services'>
-            <div className="w-full flex justify-end">
+            <div className="hidden w-full md:flex justify-end">
               <div className='w-[60vw] p-20'>
                 <div className=" mb-10 h-[50vh] block p-6 bg-white rounded-lg  shadow-[#ED4395] hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
@@ -284,14 +285,15 @@ export default function HomePage() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={4.5} speed={0} id='projects'> 
+          <ParallaxLayer offset={window.innerWidth < 768 ? 3.9 : 4.5} speed={0} id='projects'> 
           <Image className='w-full'
                 priority
                 src={projectsbg}
                 alt="projectsBG"
               />
           </ParallaxLayer>
-          <ParallaxLayer offset={4.6} speed={0.2}>
+
+          <ParallaxLayer offset={window.innerWidth < 768 ? 3.7 : 4.6} speed={0.2}>
             <div className='w-full text-center'>
                 <h1 className='text-5xl text-white py-10'>what we&apos;ve done</h1>
             </div>
@@ -332,9 +334,10 @@ export default function HomePage() {
                 </div>
             </Carousel>
 
-            <Link href={'#contact'} className='w-full flex justify-center mt-10'>
-              <button type="button" className="w-1/3 mx-auto text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-xl px-5 py-2.5 text-center">get in touch</button>
+            <Link href={'#contact'} className='w-full flex justify-center md:mt-10'>
+              <button type="button" className="w-[95%] md:w-1/3 mx-auto text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-xl px-5 py-2.5 text-center">get in touch</button>
             </Link>
+
           </ParallaxLayer>
 
           {/* <ParallaxLayer offset={5.5} speed={0}>
@@ -380,27 +383,27 @@ export default function HomePage() {
             />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={5.5} speed={0}>
+          <ParallaxLayer offset={4.4} speed={0}>
             <div className='w-full text-center'>
                 <h1 className='text-5xl text-white py-10'>about me</h1>
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={5.65} speed={0}>
+          <ParallaxLayer offset={4.6} speed={0}>
             <div className='pl-[5vw]'>
               <Image className='rounded-full'
-              height={400}
+              height={window.innerWidth < 768 ? 150 : 400}
                 src={portrait}
                 alt="portrait"
               />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={5.65} speed={0}>
-            <div className='w-full flex justify-end pr-[15vw] m-20'>
-              <div className='w-1/2 text-center bg-gray-800 rounded-xl'>
-                  <h2 className='text-2xl text-white pt-10'>Skills</h2>
-                  <p className='text-white p-10 text-start'>
+          <ParallaxLayer offset={window.innerWidth < 768 ? 5.65 : 5.65} speed={0}>
+            <div className='w-full flex justify-end md:pr-[15vw] md:m-20'>
+              <div className='md:w-1/2 text-center bg-gray-800 rounded-xl'>
+                  <h2 className='text-2xl text-white pt-2 md:pt-10'>Skills</h2>
+                  <p className='text-white p-2 md:p-10 text-start'>
                     <ul className='list-disc'>
                       <li>CMS development (content managment systems) - Wix, Squarspace, Wordpress and more</li>
                       <li>Code devepment - HTML, Javascript, CSS, Python, Java, Dart</li>
@@ -413,10 +416,10 @@ export default function HomePage() {
             </div>
           </ParallaxLayer>
           
-          <ParallaxLayer offset={6.1} speed={0}>
+          <ParallaxLayer offset={window.innerWidth < 768 ? 4.85 : 6.1} speed={0}>
             <div className='w-full flex justify-center'>
-              <div className='w-2/3 text-center'>
-                  <p className='text-md text-white py-10'>
+              <div className='md:w-2/3 text-center'>
+                  <p className='text-md text-white md:py-10'>
                     I&apos;m a web developer based on the beautiful south coast of the U.K. I absolutely love creating websites with user-friendly interfaces that are visually stunning. I graduated from Cardiff University with a degree in Software Engineering, where I learned the ins and outs of website and app development.
                     <br/><br/>
 
@@ -429,7 +432,7 @@ export default function HomePage() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={6.5} speed={0}>
+          {/* <ParallaxLayer offset={6.5} speed={0}>
             <motion.div
             className=''>
               <Image className=''
@@ -437,15 +440,15 @@ export default function HomePage() {
                 alt="background"
               />
             </motion.div>
-          </ParallaxLayer>
+          </ParallaxLayer> */}
 
-          <ParallaxLayer offset={6.55} speed={-0.1}>
+          <ParallaxLayer offset={window.innerWidth < 768 ? 6.1 : 6.55} speed={0.1}>
             <div className='w-full text-center'>
                 <h1 className='text-5xl text-white py-10'>get in touch</h1>
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={6.65} speed={-0.2}>
+          <ParallaxLayer offset={window.innerWidth < 768 ? 6.3 : 6.75} speed={0.2}>
             <div className='flex justify-center'>
             <ContactForm></ContactForm>
             </div>

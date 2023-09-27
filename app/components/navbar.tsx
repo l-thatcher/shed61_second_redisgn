@@ -15,7 +15,7 @@ export default function Navbar() {
           <ul className="flex items-center justify-around h-full">
             <li>
               <Link href="/">
-                <p className="text-white text-md font-w200">home</p>
+                <p className="text-white text-xs md:text-md font-w200">home</p>
               </Link>
             </li>
             <li >

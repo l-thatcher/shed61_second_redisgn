@@ -115,11 +115,11 @@ export default function ContactForm(){
 
 
                 <div className='m-auto pointer-events-auto p-5'>
-                    <form className="w-[80vw]"
+                    <form className="w-[100vw] md:w-[80vw]"
                           onSubmit={handleSubmit}
                     >
-                        <div className="flex justify-between ">
-                            <div className="w-1/2 -mt-14 bg-[#232E4D] p-8 rounded-tl-lg">
+                        <div className="flex flex-col md:flex-row justify-between ">
+                            <div className="w-full md:w-1/2 md:-mt-14 bg-[#232E4D] px-2 md:p-8 rounded-tl-lg">
                                 <label className="w-fit block uppercase tracking-wide font-light text-white bg-[#F4706C] rounded-t-lg text-md px-5 py-2.5"
                                        htmlFor="grid-first-name">
                                     First Name
@@ -131,7 +131,7 @@ export default function ContactForm(){
                                         setFirstName(e.target.value);}}>
                                 </input>
                             </div>
-                            <div className="w-1/2 -mt-14 bg-[#232E4D] p-8 rounded-tr-lg">
+                            <div className="w-full md:w-1/2 md:-mt-14 bg-[#232E4D] px-2 md:p-8 rounded-tr-lg">
                                 <label className="w-fit block uppercase tracking-wide font-light text-white bg-[#F4706C] rounded-t-lg text-md px-5 py-2.5"
                                        htmlFor="grid-last-name">
                                     Last Name
@@ -145,9 +145,9 @@ export default function ContactForm(){
                                 </input>
                             </div>
                         </div>
-                        <div className="flex justify-between  ">
-                            <div className="w-full bg-[#232E4D] p-8 shadow-md">
-                                <div className="w-full px-3">
+                        <div className="flex justify-between">
+                            <div className="w-full bg-[#232E4D] px-2 md:p-8 shadow-md">
+                                <div className="w-full py-2.5 md:py-0 md:px-3">
                                     <label className="w-fit block uppercase tracking-wide font-light text-white bg-[#F4706C] rounded-t-lg text-md px-5 py-2.5"
                                         htmlFor="grid-password">
                                         E-mail
@@ -163,8 +163,8 @@ export default function ContactForm(){
                             </div>
                         </div>
                         <div className="flex justify-between -mb-14">
-                            <div className="w-full bg-[#232E4D] p-8 rounded-b-lg shadow-md">
-                                <div className="w-full px-3 ">
+                            <div className="w-full bg-[#232E4D] px-2 md:p-8 rounded-b-lg shadow-md">
+                                <div className="w-full md:px-3 ">
                                     <label className="w-fit block uppercase tracking-wide font-light text-white bg-[#F4706C] rounded-t-lg text-md px-5 py-2.5"
                                         htmlFor="grid-password">
                                         Message
